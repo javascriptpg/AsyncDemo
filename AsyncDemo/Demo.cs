@@ -30,20 +30,9 @@ namespace AsyncDemo
         /// <param name="e">e</param>
         private void btnSyncTypewriter_Click(object sender, EventArgs e)
         {
-            //// 將 txtInput.Text 轉 char陣列
-            string inputContent = this.txtInput.Text;
-            char[] charArray = new char[inputContent.Length];
-            charArray = inputContent.ToArray();
-
-            //// 每0.3秒增加一個字元到 txtOutput.Text
-            this.txtOutput.Text = string.Empty;
-            for (int i = 0; i < inputContent.Length; i++)
-            {
-                Thread.Sleep(300);
-                this.txtOutput.Text += charArray[i].ToString();
-            }
+            ShowMessageTypewriter();
         }
-
+        
         /// <summary>
         /// 非動步方式更新 txtOutput.Text
         /// </summary>
@@ -58,24 +47,35 @@ namespace AsyncDemo
             thread.Start();
         }
 
+        /// <summary>
+        /// 非動步打字機效果更新 txtOutput.Text
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="e">e</param>
         private void btnAsyncTypewriter_Click(object sender, EventArgs e)
         {
-            Thread thread = new Thread(() =>
-            {
-                //// 將 txtInput.Text 轉 char陣列
-                string inputContent = this.txtInput.Text;
-                char[] charArray = new char[inputContent.Length];
-                charArray = inputContent.ToArray();
-
-                //// 每0.3秒增加一個字元到 txtOutput.Text
-                this.txtOutput.Text = string.Empty;
-                for (int i = 0; i < inputContent.Length; i++)
-                {
-                    Thread.Sleep(300);
-                    this.txtOutput.Text += charArray[i].ToString();
-                }
-            });
+            Thread thread = new Thread(ShowMessageTypewriter);
             thread.Start();
         }
+
+        /// <summary>
+        /// 打字機效果更新 txtOutput.Text
+        /// </summary>
+        private void ShowMessageTypewriter()
+        {
+            //// 將 txtInput.Text 轉 char陣列
+            string inputContent = this.txtInput.Text;
+            char[] charArray = new char[inputContent.Length];
+            charArray = inputContent.ToArray();
+
+            //// 每0.3秒增加一個字元到 txtOutput.Text
+            this.txtOutput.Text = string.Empty;
+            for (int i = 0; i < inputContent.Length; i++)
+            {
+                Thread.Sleep(300);
+                this.txtOutput.Text += charArray[i].ToString();
+            }
+        }
+
     }
 }
