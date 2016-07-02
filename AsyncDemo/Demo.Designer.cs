@@ -97,6 +97,7 @@
             this.btnAsyncTypewriter.TabIndex = 5;
             this.btnAsyncTypewriter.Text = "Async(typewriter)";
             this.btnAsyncTypewriter.UseVisualStyleBackColor = true;
+            this.btnAsyncTypewriter.Click += new System.EventHandler(this.btnAsyncTypewriter_Click);
             // 
             // Demo
             // 
