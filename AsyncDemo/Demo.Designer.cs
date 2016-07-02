@@ -33,6 +33,7 @@
             this.btnSync = new System.Windows.Forms.Button();
             this.btnSyncTypewriter = new System.Windows.Forms.Button();
             this.btnAsync = new System.Windows.Forms.Button();
+            this.btnAsyncTypewriter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -88,11 +89,21 @@
             this.btnAsync.UseVisualStyleBackColor = true;
             this.btnAsync.Click += new System.EventHandler(this.btnAsync_Click);
             // 
+            // btnAsyncTypewriter
+            // 
+            this.btnAsyncTypewriter.Location = new System.Drawing.Point(463, 103);
+            this.btnAsyncTypewriter.Name = "btnAsyncTypewriter";
+            this.btnAsyncTypewriter.Size = new System.Drawing.Size(125, 23);
+            this.btnAsyncTypewriter.TabIndex = 5;
+            this.btnAsyncTypewriter.Text = "Async(typewriter)";
+            this.btnAsyncTypewriter.UseVisualStyleBackColor = true;
+            // 
             // Demo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 400);
+            this.Controls.Add(this.btnAsyncTypewriter);
             this.Controls.Add(this.btnAsync);
             this.Controls.Add(this.btnSyncTypewriter);
             this.Controls.Add(this.btnSync);
@@ -112,6 +123,7 @@
         private System.Windows.Forms.Button btnSync;
         private System.Windows.Forms.Button btnSyncTypewriter;
         private System.Windows.Forms.Button btnAsync;
+        private System.Windows.Forms.Button btnAsyncTypewriter;
     }
 }
 
