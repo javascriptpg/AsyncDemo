@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AsyncDemo
 {
-    public partial class Form1 : Form
+    public partial class Demo : Form
     {
-        public Form1()
+        public Demo()
         {
             InitializeComponent();
         }

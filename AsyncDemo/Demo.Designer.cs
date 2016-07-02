@@ -1,6 +1,6 @@
 ﻿namespace AsyncDemo
 {
-    partial class Form1
+    partial class Demo
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Demo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "Demo";
+            this.Text = "DemoForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
