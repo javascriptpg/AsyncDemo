@@ -13,18 +13,26 @@ namespace AsyncDemo
 {
     public partial class Demo : Form
     {
+        /// <summary>
+        /// Demo建構式
+        /// </summary>
         public Demo()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// btnSync_Click方法，更新 txtOutput.Text
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="e">e</param>
         private void btnSync_Click(object sender, EventArgs e)
         {
             this.txtOutput.Text = this.txtInput.Text;
         }
 
         /// <summary>
-        /// 動步方式更新 txtOutput.Text
+        /// btnSyncTypewriter_Click方法，動步打字機效果更新 txtOutput.Text
         /// </summary>
         /// <param name="sender">sender</param>
         /// <param name="e">e</param>
@@ -32,9 +40,9 @@ namespace AsyncDemo
         {
             ShowMessageTypewriter();
         }
-        
+
         /// <summary>
-        /// 非動步方式更新 txtOutput.Text
+        /// btnAsync_Click方法，非動步方式更新 txtOutput.Text
         /// </summary>
         /// <param name="sender">sender</param>
         /// <param name="e">e</param>
@@ -48,7 +56,7 @@ namespace AsyncDemo
         }
 
         /// <summary>
-        /// 非動步打字機效果更新 txtOutput.Text
+        /// btnAsyncTypewriter_Click方法，非動步打字機效果更新 txtOutput.Text
         /// </summary>
         /// <param name="sender">sender</param>
         /// <param name="e">e</param>
