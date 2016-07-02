@@ -75,6 +75,7 @@
             this.btnSyncTypewriter.TabIndex = 3;
             this.btnSyncTypewriter.Text = "Sync(typewriter)";
             this.btnSyncTypewriter.UseVisualStyleBackColor = true;
+            this.btnSyncTypewriter.Click += new System.EventHandler(this.btnSyncTypewriter_Click);
             // 
             // Demo
             // 
