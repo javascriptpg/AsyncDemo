@@ -64,6 +64,7 @@
             this.btnSync.TabIndex = 2;
             this.btnSync.Text = "Sync";
             this.btnSync.UseVisualStyleBackColor = true;
+            this.btnSync.Click += new System.EventHandler(this.btnSync_Click);
             // 
             // Demo
             // 

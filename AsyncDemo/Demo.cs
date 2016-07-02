@@ -16,5 +16,10 @@ namespace AsyncDemo
         {
             InitializeComponent();
         }
+
+        private void btnSync_Click(object sender, EventArgs e)
+        {
+            this.txtOutput.Text = this.txtInput.Text;
+        }
     }
 }
