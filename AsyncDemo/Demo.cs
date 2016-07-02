@@ -24,6 +24,7 @@ namespace AsyncDemo
         {
             this.myThread = null;
             InitializeComponent();
+            this.Text = Thread.CurrentThread.ManagedThreadId.ToString();
         }
 
         /// <summary>
