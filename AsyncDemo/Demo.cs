@@ -43,5 +43,19 @@ namespace AsyncDemo
                 this.txtOutput.Text += charArray[i].ToString();
             }
         }
+
+        /// <summary>
+        /// 非動步方式更新 txtOutput.Text
+        /// </summary>
+        /// <param name="sender">sender</param>
+        /// <param name="e">e</param>
+        private void btnAsync_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(() =>
+            {
+                this.txtOutput.Text = this.txtInput.Text;
+            });
+            thread.Start();
+        }
     }
 }

@@ -86,6 +86,7 @@
             this.btnAsync.TabIndex = 4;
             this.btnAsync.Text = "Async";
             this.btnAsync.UseVisualStyleBackColor = true;
+            this.btnAsync.Click += new System.EventHandler(this.btnAsync_Click);
             // 
             // Demo
             // 
